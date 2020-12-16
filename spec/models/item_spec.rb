@@ -11,10 +11,6 @@ RSpec.describe Item, type: :model do
       it 'image、name、text、category_id、condition_id、postage_id、prefecture_id、day_id、priceがあれば商品は出品される' do
         expect(@item).to be_valid
       end
-      it 'priceが半角入力の時' do
-        @item.price = 1111
-        expect(@item).to be_valid
-      end
     end
     context '商品の出品ができない場合' do
       # 空白関係のテスト
